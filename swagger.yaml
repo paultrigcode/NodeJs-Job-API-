@@ -81,7 +81,20 @@ paths:
         - Jobs
       summary: Get All Jobs
       operationId: GetAllJobs
-      parameters: []
+      parameters: [{
+        "name": "page",
+        "in": "query",
+        "type": "integer",
+        # "format": "email",
+        "required": true,
+      },
+      {
+        "name": "limit",
+        "in": "query",
+        "type": "integer",
+        # "format": "email",
+        "required": true,
+      }]
       responses:
         '200':
           description: ''
